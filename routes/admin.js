@@ -1,12 +1,11 @@
-const express           = require("express");
+const   express                 = require("express"),
+        adminController         = require("../controllers/adminController");
 
 const router = express.Router();
 
 // CONFIG
 
 // ROUTES
-router.get("/", (req, res) => {
-    res.send("<h1>WALA, ADMIN SECTION WORKS</h1>");
-});
+router.get("/", adminController.dashboard);
 
 module.exports = router;
